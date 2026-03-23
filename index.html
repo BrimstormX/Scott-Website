@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sell Your Land Fast for Cash | The Scott Group Property Advisors</title>
+  <meta name="description" content="Get a fair cash offer for your vacant land in as little as 24 hours. No commissions, no closing costs, no hassle. The Scott Group Property Advisors buys land nationwide.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Karla:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --red: #B22234;
+      --red-dark: #8C1B2A;
+      --orange: #D94E1F;
+      --amber: #E87D1A;
+      --gold: #F0A31B;
+      --gold-light: #F7C948;
+      --brand-gradient: linear-gradient(135deg, #B22234, #D94E1F, #E87D1A, #F0A31B);
+      --brand-gradient-text: linear-gradient(135deg, #B22234 10%, #D94E1F 40%, #E87D1A 70%, #F0A31B 100%);
+
+      --white: #FFFFFF;
+      --ivory: #FDFCFA;
+      --stone-50: #F8F6F3;
+      --stone-100: #F0ECE6;
+      --stone-200: #DDD7CC;
+      --stone-300: #C4BAA9;
+      --stone-400: #9E9484;
+      --stone-500: #7A7164;
+      --stone-600: #5E5649;
+      --stone-700: #45403A;
+      --stone-800: #2D2A26;
+      --stone-900: #1A1816;
+
+      --serif: 'Lora', 'Georgia', 'Times New Roman', serif;
+      --sans: 'Karla', 'Helvetica Neue', 'Helvetica', sans-serif;
+
+      --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body { font-family: var(--sans); color: var(--stone-700); background: var(--white); line-height: 1.65; overflow-x: hidden; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ::selection { background: rgba(232, 125, 26, 0.15); }
+
+    /* ===================== UTILITIES ===================== */
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
+    .section { padding: 100px 0; }
+    .text-center { text-align: center; }
+
+    /* Decorative rule matching logo style */
+    .brand-rule {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 20px 0;
+    }
+    .brand-rule::before,
+    .brand-rule::after {
+      content: '';
+      width: 60px;
+      height: 1.5px;
+      background: var(--brand-gradient);
+      border-radius: 1px;
+    }
+    .brand-rule-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--orange);
+    }
+
+    /* Scroll reveal */
+    .sr { opacity: 0; transform: translateY(28px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
+    .sr.visible { opacity: 1; transform: translateY(0); }
+    .sr-d1 { transition-delay: 0.1s; }
+    .sr-d2 { transition-delay: 0.2s; }
+    .sr-d3 { transition-delay: 0.3s; }
+
+    /* ===================== NAV ===================== */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+      background: rgba(253,252,250,0);
+      border-bottom: 1px solid transparent;
+      transition: background 0.4s, border-color 0.4s, padding 0.4s;
+      padding: 18px 0;
+    }
+    .nav.pinned {
+      background: rgba(253,252,250,0.97);
+      border-bottom-color: var(--stone-100);
+      padding: 12px 0;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo img { height: 52px; width: auto; transition: height 0.4s var(--ease); }
+    .nav.pinned .nav-logo img { height: 44px; }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-link {
+      font-size: 14px; font-weight: 500; color: var(--stone-600);
+      letter-spacing: 0.3px; transition: color 0.25s;
+    }
+    .nav-link:hover { color: var(--orange); }
+    .nav-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 28px;
+      background: var(--brand-gradient);
+      color: #fff; font-weight: 600; font-size: 14px;
+      border: none; border-radius: 6px; cursor: pointer;
+      transition: box-shadow 0.3s, transform 0.25s;
+      letter-spacing: 0.2px;
+    }
+    .nav-btn:hover { box-shadow: 0 6px 20px rgba(217,78,31,0.3); transform: translateY(-1px); }
+    .nav-btn svg { width: 14px; height: 14px; }
+
+    /* ===================== HERO ===================== */
+    .hero {
+      padding: 160px 0 100px;
+      background: var(--ivory);
+      position: relative;
+      overflow: hidden;
+    }
+    /* Subtle warm radial glow */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -200px; right: -200px;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(240,163,27,0.06) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 64px;
+      align-items: center;
+      position: relative; z-index: 1;
+    }
+    .hero-tagline {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: 12px; font-weight: 700;
+      letter-spacing: 2.5px; text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 18px;
+      opacity: 0; animation: fadeUp 0.6s 0.2s var(--ease) forwards;
+    }
+    .hero-h1 {
+      font-family: var(--serif);
+      font-size: 50px; font-weight: 700; line-height: 1.15;
+      color: var(--stone-900);
+      letter-spacing: -0.5px;
+      margin-bottom: 22px;
+      opacity: 0; animation: fadeUp 0.6s 0.35s var(--ease) forwards;
+    }
+    .hero-h1 span {
+      background: var(--brand-gradient-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-p {
+      font-size: 17px; color: var(--stone-500);
+      max-width: 460px; line-height: 1.75;
+      margin-bottom: 36px;
+      opacity: 0; animation: fadeUp 0.6s 0.5s var(--ease) forwards;
+    }
+    .hero-cta-row {
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+      opacity: 0; animation: fadeUp 0.6s 0.65s var(--ease) forwards;
+    }
+    .btn-main {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 16px 36px;
+      background: var(--brand-gradient); color: #fff;
+      font-family: var(--sans); font-weight: 700; font-size: 15px;
+      border: none; border-radius: 6px; cursor: pointer;
+      transition: box-shadow 0.3s, transform 0.25s;
+      letter-spacing: 0.3px;
+    }
+    .btn-main:hover { box-shadow: 0 8px 28px rgba(217,78,31,0.3); transform: translateY(-2px); }
+    .btn-main svg { width: 16px; height: 16px; transition: transform 0.25s; }
+    .btn-main:hover svg { transform: translateX(3px); }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 16px 28px;
+      background: transparent; color: var(--stone-700);
+      font-family: var(--sans); font-weight: 600; font-size: 15px;
+      border: 1.5px solid var(--stone-200); border-radius: 6px; cursor: pointer;
+      transition: border-color 0.25s, color 0.25s, transform 0.25s;
+    }
+    .btn-outline:hover { border-color: var(--orange); color: var(--orange); transform: translateY(-1px); }
+    .btn-outline svg { width: 14px; height: 14px; }
+
+    /* Hero right - logo showcase */
+    .hero-showcase {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      opacity: 0; animation: fadeIn 0.8s 0.5s var(--ease) forwards;
+    }
+    .hero-logo-img {
+      width: 320px; height: auto;
+      filter: drop-shadow(0 4px 24px rgba(178,34,52,0.08));
+    }
+    .hero-logo-caption {
+      margin-top: 20px;
+      font-size: 13px; color: var(--stone-400);
+      letter-spacing: 1px; text-transform: uppercase; font-weight: 500;
+    }
+
+    /* Hero stats bar */
+    .hero-stats {
+      display: flex; align-items: center; gap: 40px;
+      margin-top: 52px; padding-top: 32px;
+      border-top: 1px solid var(--stone-200);
+      opacity: 0; animation: fadeUp 0.6s 0.8s var(--ease) forwards;
+    }
+    .hero-stat strong {
+      display: block;
+      font-family: var(--serif); font-size: 30px; font-weight: 700;
+      color: var(--stone-900); letter-spacing: -0.5px; line-height: 1.1;
+    }
+    .hero-stat small {
+      font-size: 13px; color: var(--stone-400); font-weight: 500;
+    }
+    .hero-stat-sep { width: 1px; height: 36px; background: var(--stone-200); }
+
+    /* ===================== TRUST BAR ===================== */
+    .trust-bar {
+      background: var(--stone-900);
+      padding: 22px 0;
+      overflow: hidden;
+    }
+    .trust-bar-inner {
+      display: flex; align-items: center; justify-content: center;
+      gap: 40px; flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 10px;
+      color: rgba(255,255,255,0.55);
+      font-size: 13px; font-weight: 500; white-space: nowrap;
+    }
+    .trust-item svg { width: 16px; height: 16px; color: var(--gold); }
+    .trust-sep { width: 3px; height: 3px; border-radius: 50%; background: rgba(255,255,255,0.15); }
+
+    /* ===================== HOW IT WORKS ===================== */
+    .how { background: var(--white); }
+    .section-eyebrow {
+      font-size: 12px; font-weight: 700; letter-spacing: 2.5px;
+      text-transform: uppercase; color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .section-h2 {
+      font-family: var(--serif);
+      font-size: clamp(30px, 4vw, 44px); font-weight: 700;
+      line-height: 1.15; color: var(--stone-900);
+      letter-spacing: -0.5px; margin-bottom: 14px;
+    }
+    .section-sub {
+      font-size: 16px; color: var(--stone-500); line-height: 1.7;
+      max-width: 520px;
+    }
+    .section-header-center { text-align: center; max-width: 560px; margin: 0 auto 64px; }
+    .section-header-center .section-sub { margin: 0 auto; }
+
+    .steps {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 28px; position: relative;
+    }
+    /* Horizontal connector */
+    .steps::after {
+      content: '';
+      position: absolute;
+      top: 56px; left: calc(16.66% + 40px); right: calc(16.66% + 40px);
+      height: 2px;
+      background: repeating-linear-gradient(90deg, var(--stone-200) 0 8px, transparent 8px 16px);
+    }
+    .step-card {
+      background: var(--ivory);
+      border: 1px solid var(--stone-100);
+      border-radius: 10px;
+      padding: 36px 28px;
+      text-align: center;
+      position: relative; z-index: 1;
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+    .step-card:hover {
+      border-color: rgba(217,78,31,0.2);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.05);
+      transform: translateY(-3px);
+    }
+    .step-num {
+      width: 52px; height: 52px; border-radius: 50%;
+      background: var(--brand-gradient);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+      font-family: var(--serif); font-size: 20px; font-weight: 700; color: #fff;
+    }
+    .step-card h3 {
+      font-family: var(--serif); font-size: 20px; font-weight: 600;
+      color: var(--stone-900); margin-bottom: 8px;
+    }
+    .step-card p { font-size: 14px; color: var(--stone-500); line-height: 1.65; }
+
+    /* ===================== BENEFITS ===================== */
+    .benefits { background: var(--ivory); position: relative; }
+    .benefits::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent 5%, var(--stone-200) 50%, transparent 95%);
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: start;
+    }
+    .benefits-col .section-eyebrow { text-align: left; }
+    .benefits-col .section-h2 { text-align: left; }
+    .benefits-col .section-sub { margin-bottom: 40px; }
+
+    .benefit-list { display: flex; flex-direction: column; gap: 6px; }
+    .benefit-row {
+      display: flex; align-items: flex-start; gap: 16px;
+      padding: 18px 20px; border-radius: 8px;
+      transition: background 0.3s, transform 0.25s;
+    }
+    .benefit-row:hover { background: var(--white); transform: translateX(4px); }
+    .benefit-ico {
+      width: 44px; height: 44px; border-radius: 10px;
+      background: var(--stone-50);
+      border: 1px solid var(--stone-100);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      transition: background 0.3s, border-color 0.3s;
+    }
+    .benefit-row:hover .benefit-ico {
+      background: rgba(217,78,31,0.06);
+      border-color: rgba(217,78,31,0.15);
+    }
+    .benefit-ico svg { width: 20px; height: 20px; color: var(--orange); }
+    .benefit-row h4 {
+      font-family: var(--serif); font-size: 17px; font-weight: 600;
+      color: var(--stone-800); margin-bottom: 2px;
+    }
+    .benefit-row p { font-size: 14px; color: var(--stone-500); line-height: 1.55; }
+
+    /* Right column: stats panel */
+    .stats-panel {
+      background: var(--stone-900); color: #fff;
+      border-radius: 10px;
+      padding: 44px; position: relative; overflow: hidden;
+    }
+    .stats-panel::before {
+      content: ''; position: absolute;
+      top: -60px; right: -60px;
+      width: 200px; height: 200px;
+      background: radial-gradient(circle, rgba(240,163,27,0.12), transparent 70%);
+      pointer-events: none;
+    }
+    .stats-panel-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 32px;
+    }
+    .stats-panel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .stat-block strong {
+      display: block;
+      font-family: var(--serif); font-size: 44px; font-weight: 700;
+      letter-spacing: -1px; line-height: 1;
+      background: linear-gradient(135deg, #fff 40%, var(--gold-light));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 6px;
+    }
+    .stat-block span { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.4; }
+    .stats-panel-divider {
+      grid-column: 1 / -1;
+      height: 1px; background: rgba(255,255,255,0.07);
+    }
+
+    /* ===================== COVERAGE ===================== */
+    .coverage {
+      background: var(--white); padding: 44px 0; text-align: center;
+      border-top: 1px solid var(--stone-100);
+      border-bottom: 1px solid var(--stone-100);
+    }
+    .coverage p { font-size: 15px; color: var(--stone-500); line-height: 1.7; }
+    .coverage strong { color: var(--stone-800); font-weight: 600; }
+    .coverage .excluded { font-size: 13px; color: var(--stone-400); margin-top: 8px; }
+
+    /* ===================== CONTACT ===================== */
+    .contact { background: var(--ivory); position: relative; }
+    .contact::before {
+      content: ''; position: absolute;
+      bottom: 0; left: 50%; transform: translateX(-50%);
+      width: 600px; height: 400px;
+      background: radial-gradient(ellipse, rgba(240,163,27,0.04), transparent 70%);
+      pointer-events: none;
+    }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1.15fr;
+      gap: 72px; align-items: start;
+      position: relative; z-index: 1;
+    }
+    .contact-left .section-eyebrow { text-align: left; }
+    .contact-left .section-h2 { text-align: left; margin-bottom: 14px; }
+    .contact-text { font-size: 16px; color: var(--stone-500); line-height: 1.75; margin-bottom: 36px; }
+    .promise-list { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-bottom: 44px; }
+    .promise-item {
+      display: flex; align-items: center; gap: 12px;
+      font-size: 14px; font-weight: 500; color: var(--stone-700);
+    }
+    .promise-check {
+      width: 28px; height: 28px; border-radius: 6px;
+      background: rgba(217,78,31,0.07);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .promise-check svg { width: 14px; height: 14px; color: var(--orange); }
+
+    /* Testimonial */
+    .testi {
+      padding: 24px 28px;
+      background: var(--white); border-radius: 8px;
+      border-left: 3px solid var(--orange);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+    .testi p {
+      font-family: var(--serif); font-size: 17px; font-style: italic;
+      color: var(--stone-700); line-height: 1.65; margin-bottom: 10px;
+    }
+    .testi cite {
+      font-style: normal; font-family: var(--sans);
+      font-size: 13px; color: var(--stone-400); font-weight: 500;
+    }
+
+    /* Form */
+    .form-wrap {
+      background: var(--white);
+      border: 1px solid var(--stone-100);
+      border-radius: 10px;
+      padding: 44px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+      position: relative;
+    }
+    .form-wrap::before {
+      content: ''; position: absolute;
+      top: 0; left: 36px; right: 36px; height: 3px;
+      background: var(--brand-gradient); border-radius: 0 0 3px 3px;
+    }
+    .form-heading {
+      font-family: var(--serif); font-size: 26px; font-weight: 700;
+      color: var(--stone-900); margin-bottom: 4px;
+    }
+    .form-subheading { font-size: 14px; color: var(--stone-400); margin-bottom: 28px; }
+    .field { margin-bottom: 18px; }
+    .field label {
+      display: block; font-size: 13px; font-weight: 600;
+      color: var(--stone-700); margin-bottom: 6px;
+    }
+    .field label .req { color: var(--red); }
+    .field label .opt { color: var(--stone-300); font-weight: 400; font-size: 12px; }
+    .field input, .field textarea {
+      width: 100%; padding: 14px 16px;
+      border: 1.5px solid var(--stone-100);
+      border-radius: 6px;
+      font-family: var(--sans); font-size: 15px;
+      color: var(--stone-800);
+      background: var(--white);
+      transition: border-color 0.25s, box-shadow 0.25s;
+      outline: none;
+    }
+    .field input::placeholder, .field textarea::placeholder { color: var(--stone-300); }
+    .field input:focus, .field textarea:focus {
+      border-color: var(--orange);
+      box-shadow: 0 0 0 3px rgba(217,78,31,0.07);
+    }
+    .field input.err, .field textarea.err {
+      border-color: var(--red);
+      box-shadow: 0 0 0 3px rgba(178,34,52,0.07);
+    }
+    .field textarea { resize: vertical; min-height: 100px; }
+    .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+    .btn-submit {
+      width: 100%; padding: 16px 28px;
+      background: var(--brand-gradient); color: #fff;
+      font-family: var(--sans); font-weight: 700; font-size: 16px;
+      border: none; border-radius: 6px; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      transition: box-shadow 0.3s, transform 0.25s;
+      letter-spacing: 0.3px; margin-top: 4px;
+    }
+    .btn-submit:hover { box-shadow: 0 8px 28px rgba(217,78,31,0.3); transform: translateY(-2px); }
+    .btn-submit svg { width: 16px; height: 16px; transition: transform 0.25s; }
+    .btn-submit:hover svg { transform: translateX(3px); }
+
+    .tcpa-box {
+      margin-top: 20px; padding: 14px 16px;
+      background: var(--stone-50); border-radius: 6px;
+      border: 1px solid var(--stone-100);
+    }
+    .tcpa-box p { font-size: 11px; color: var(--stone-400); line-height: 1.7; }
+
+    /* Success state */
+    .form-ok { display: none; text-align: center; padding: 44px 20px; }
+    .form-ok.show { display: block; animation: fadeUp 0.5s var(--ease); }
+    .form-ok-icon {
+      width: 68px; height: 68px; border-radius: 50%;
+      background: rgba(217,78,31,0.08);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .form-ok-icon svg { width: 30px; height: 30px; color: var(--orange); }
+    .form-ok h3 {
+      font-family: var(--serif); font-size: 24px; font-weight: 700;
+      color: var(--stone-900); margin-bottom: 8px;
+    }
+    .form-ok p { font-size: 15px; color: var(--stone-500); line-height: 1.7; max-width: 360px; margin: 0 auto; }
+
+    /* ===================== FOOTER ===================== */
+    .footer {
+      background: var(--stone-900); color: rgba(255,255,255,0.4);
+      padding: 44px 0 28px; position: relative;
+    }
+    .footer::before {
+      content: ''; position: absolute;
+      top: 0; left: 0; right: 0; height: 3px;
+      background: var(--brand-gradient);
+    }
+    .footer-top {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,0.06);
+      margin-bottom: 20px; flex-wrap: wrap; gap: 16px;
+    }
+    .footer-brand { display: flex; align-items: center; gap: 12px; }
+    .footer-brand img { height: 40px; width: auto; filter: brightness(10); opacity: 0.7; }
+    .footer-brand span {
+      font-family: var(--serif); font-size: 16px; font-weight: 600;
+      color: rgba(255,255,255,0.7);
+    }
+    .footer-copy { font-size: 13px; }
+    .footer-tcpa { font-size: 11px; line-height: 1.75; color: rgba(255,255,255,0.25); max-width: 800px; }
+
+    /* ===================== ANIMATIONS ===================== */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* ===================== RESPONSIVE ===================== */
+    @media (max-width: 1024px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+      .hero-showcase { align-items: flex-start; }
+      .hero-logo-img { width: 240px; }
+      .benefits-grid { grid-template-columns: 1fr; gap: 48px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+    }
+    @media (max-width: 768px) {
+      .section { padding: 72px 0; }
+      .nav-links { display: none; }
+      .nav-btn { display: none; }
+      .hero { padding: 120px 0 72px; }
+      .hero-h1 { font-size: 36px; }
+      .hero-stats { gap: 24px; flex-wrap: wrap; }
+      .hero-stat-sep { display: none; }
+      .steps { grid-template-columns: 1fr; gap: 20px; }
+      .steps::after { display: none; }
+      .field-row { grid-template-columns: 1fr; }
+      .form-wrap { padding: 32px 22px; }
+      .form-wrap::before { left: 22px; right: 22px; }
+      .footer-top { flex-direction: column; text-align: center; }
+      .testi { display: none; }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+      .hero-h1 { font-size: 30px; }
+      .hero-p { font-size: 15px; }
+      .hero-cta-row { flex-direction: column; }
+      .btn-main, .btn-outline { width: 100%; justify-content: center; }
+      .hero-logo-img { width: 200px; }
+      .section-h2 { font-size: 26px; }
+    }
+
+    /* Mobile nav button */
+    .nav-mobile-btn {
+      display: none;
+      padding: 10px 22px;
+      background: var(--brand-gradient); color: #fff;
+      font-weight: 600; font-size: 13px;
+      border: none; border-radius: 6px; cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      .nav-mobile-btn { display: inline-flex; align-items: center; gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======== NAV ======== -->
+  <nav class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo">
+        <img src="logo.png" alt="The Scott Group Property Advisors">
+      </a>
+      <div class="nav-links">
+        <a href="#how-it-works" class="nav-link">How It Works</a>
+        <a href="#benefits" class="nav-link">Why Us</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <a href="#contact" class="nav-btn">
+        Get Cash Offer
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+      </a>
+      <a href="#contact" class="nav-mobile-btn">
+        Get Cash Offer
+      </a>
+    </div>
+  </nav>
+
+  <!-- ======== HERO ======== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-tagline">Trusted Land Buyers &bull; Nationwide</div>
+          <h1 class="hero-h1">
+            We Buy Vacant Land<br>
+            for <span>Cash</span> &mdash; Fast
+          </h1>
+          <p class="hero-p">
+            Tell us about your property and receive a fair, no-obligation cash offer &mdash; typically within 24&nbsp;hours. No realtors, no commissions, no waiting months to close.
+          </p>
+          <div class="hero-cta-row">
+            <a href="#contact" class="btn-main">
+              Get My Cash Offer
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+            </a>
+            <a href="#how-it-works" class="btn-outline">
+              See How It Works
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <strong>42</strong>
+              <small>States Served</small>
+            </div>
+            <div class="hero-stat-sep"></div>
+            <div class="hero-stat">
+              <strong>24hr</strong>
+              <small>Offer Turnaround</small>
+            </div>
+            <div class="hero-stat-sep"></div>
+            <div class="hero-stat">
+              <strong>$0</strong>
+              <small>Fees or Commissions</small>
+            </div>
+          </div>
+        </div>
+        <div class="hero-showcase">
+          <img src="logo.png" alt="The Scott Group Property Advisors" class="hero-logo-img">
+          <div class="brand-rule">
+            <span class="brand-rule-dot"></span>
+          </div>
+          <span class="hero-logo-caption">Property Advisors You Can Trust</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== TRUST BAR ======== -->
+  <div class="trust-bar">
+    <div class="container">
+      <div class="trust-bar-inner">
+        <div class="trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/></svg>
+          Fully Licensed
+        </div>
+        <div class="trust-sep"></div>
+        <div class="trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+          Zero Fees
+        </div>
+        <div class="trust-sep"></div>
+        <div class="trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
+          Fast Cash Closings
+        </div>
+        <div class="trust-sep"></div>
+        <div class="trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg>
+          42 States Nationwide
+        </div>
+        <div class="trust-sep"></div>
+        <div class="trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          We Buy As-Is
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======== HOW IT WORKS ======== -->
+  <section class="section how" id="how-it-works">
+    <div class="container">
+      <div class="section-header-center sr">
+        <div class="section-eyebrow">How It Works</div>
+        <div class="brand-rule"><span class="brand-rule-dot"></span></div>
+        <h2 class="section-h2">Three Steps to Selling Your Land</h2>
+        <p class="section-sub">We took the complexity out of selling land. No listings, no showings, no months of waiting around.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step-card sr sr-d1">
+          <div class="step-num">1</div>
+          <h3>Tell Us About Your Land</h3>
+          <p>Complete the short form below with your property details. Takes under two minutes and there's zero obligation.</p>
+        </div>
+        <div class="step-card sr sr-d2">
+          <div class="step-num">2</div>
+          <h3>Get a Cash Offer</h3>
+          <p>We research your property and present a fair, transparent cash offer &mdash; typically within 24 hours. No games.</p>
+        </div>
+        <div class="step-card sr sr-d3">
+          <div class="step-num">3</div>
+          <h3>Pick Your Closing Date</h3>
+          <p>Accept the offer, choose a closing timeline that works for you, and get paid. We handle paperwork and closing costs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== BENEFITS ======== -->
+  <section class="section benefits" id="benefits">
+    <div class="container">
+      <div class="benefits-grid">
+        <div class="benefits-col sr">
+          <div class="section-eyebrow">Why Sell to Us</div>
+          <div class="brand-rule" style="justify-content:flex-start;"><span class="brand-rule-dot"></span></div>
+          <h2 class="section-h2">The Simpler Way to Sell Your Land</h2>
+          <p class="section-sub">Traditional listings mean months of waiting, agent commissions, and uncertainty. We offer something better.</p>
+
+          <div class="benefit-list">
+            <div class="benefit-row">
+              <div class="benefit-ico">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+              </div>
+              <div>
+                <h4>Zero Commissions or Fees</h4>
+                <p>No agent fees, no hidden costs. The offer we make is what you keep.</p>
+              </div>
+            </div>
+            <div class="benefit-row">
+              <div class="benefit-ico">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/></svg>
+              </div>
+              <div>
+                <h4>We Pay All Closing Costs</h4>
+                <p>Title, escrow, transfer fees &mdash; all on us. Your offer is your payout.</p>
+              </div>
+            </div>
+            <div class="benefit-row">
+              <div class="benefit-ico">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
+              </div>
+              <div>
+                <h4>Fast Cash, Your Timeline</h4>
+                <p>Close in as few as 14 days or on whatever schedule suits you best.</p>
+              </div>
+            </div>
+            <div class="benefit-row">
+              <div class="benefit-ico">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div>
+                <h4>We Buy Land As-Is</h4>
+                <p>Overgrown, landlocked, back taxes, unclear boundaries &mdash; doesn't matter.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sr sr-d2">
+          <div class="stats-panel">
+            <div class="stats-panel-label">By the Numbers</div>
+            <div class="stats-panel-grid">
+              <div class="stat-block">
+                <strong>24hr</strong>
+                <span>Average time to<br>receive your offer</span>
+              </div>
+              <div class="stat-block">
+                <strong>$0</strong>
+                <span>Total fees and<br>commissions charged</span>
+              </div>
+              <div class="stats-panel-divider"></div>
+              <div class="stat-block">
+                <strong>14</strong>
+                <span>Minimum days<br>to close</span>
+              </div>
+              <div class="stat-block">
+                <strong>42</strong>
+                <span>States where<br>we operate</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== COVERAGE ======== -->
+  <div class="coverage sr">
+    <div class="container">
+      <p><strong>We buy land nationwide.</strong> The Scott Group Property Advisors operates across 42 states, delivering fair cash offers to landowners coast&nbsp;to&nbsp;coast.</p>
+      <p class="excluded">We do not currently operate in Illinois, Massachusetts, Nebraska, New York, North Carolina, Oklahoma, Pennsylvania &amp; South Carolina.</p>
+    </div>
+  </div>
+
+  <!-- ======== CONTACT ======== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-left sr">
+          <div class="section-eyebrow">Contact Us</div>
+          <div class="brand-rule" style="justify-content:flex-start;"><span class="brand-rule-dot"></span></div>
+          <h2 class="section-h2">Ready to Sell Your Land?</h2>
+          <p class="contact-text">Fill out the form and our team will reach out with a fair, no-obligation cash offer. Most landowners hear back within 24&nbsp;hours.</p>
+
+          <ul class="promise-list">
+            <li class="promise-item">
+              <span class="promise-check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></span>
+              No obligation &mdash; 100% free
+            </li>
+            <li class="promise-item">
+              <span class="promise-check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></span>
+              Cash offers within 24 hours
+            </li>
+            <li class="promise-item">
+              <span class="promise-check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></span>
+              Close in as few as 14 days
+            </li>
+            <li class="promise-item">
+              <span class="promise-check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></span>
+              We cover all closing costs
+            </li>
+          </ul>
+
+          <div class="testi">
+            <p>&ldquo;The process was exactly as described &mdash; simple, fast, and straightforward. I had my cash within three weeks of first reaching out.&rdquo;</p>
+            <cite>&mdash; Recent Landowner</cite>
+          </div>
+        </div>
+
+        <div class="sr sr-d2">
+          <div class="form-wrap">
+            <div id="formContent">
+              <h3 class="form-heading">Get Your Cash Offer</h3>
+              <p class="form-subheading">Share your details and we'll be in touch.</p>
+
+              <form id="leadForm" novalidate>
+                <div class="field">
+                  <label for="fullName">Full Name <span class="req">*</span></label>
+                  <input type="text" id="fullName" name="fullName" placeholder="John Smith" required autocomplete="name">
+                </div>
+
+                <div class="field-row">
+                  <div class="field">
+                    <label for="phone">Phone Number <span class="req">*</span></label>
+                    <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required autocomplete="tel">
+                  </div>
+                  <div class="field">
+                    <label for="email">Email Address <span class="req">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="john@email.com" required autocomplete="email">
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="address">Property / Land Address <span class="opt">(Optional)</span></label>
+                  <input type="text" id="address" name="address" placeholder="123 Main St, City, State ZIP" autocomplete="street-address">
+                </div>
+
+                <div class="field">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" placeholder="Tell us about your land — acreage, location details, or anything you'd like us to know..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                  Get My Cash Offer
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+                </button>
+              </form>
+
+              <div class="tcpa-box">
+                <p>By providing your phone number, you agree to receive text messages or calls from The Scott Group Property Advisors regarding your property inquiry. Message and data rates may apply. You can opt-out at any time by replying STOP. Message frequency varies. View our Privacy Policy for more information.</p>
+              </div>
+            </div>
+
+            <div class="form-ok" id="formSuccess">
+              <div class="form-ok-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              </div>
+              <h3>We've Got Your Details!</h3>
+              <p>A member of our team will reach out within 24 hours with your cash offer. Thank you for choosing The Scott Group Property Advisors.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span>The Scott Group Property Advisors</span>
+        </div>
+        <div class="footer-copy">&copy; 2026 The Scott Group Property Advisors. All rights reserved.</div>
+      </div>
+      <p class="footer-tcpa">By providing your phone number, you agree to receive text messages or calls from The Scott Group Property Advisors regarding your property inquiry. Message and data rates may apply. You can opt-out at any time by replying STOP. Message frequency varies. This site is not intended to solicit properties currently listed with a real estate broker.</p>
+    </div>
+  </footer>
+
+  <!-- ======== JS ======== -->
+  <script>
+    // Scroll reveals
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.sr').forEach(el => io.observe(el));
+
+    // Nav scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('pinned', window.scrollY > 60);
+    }, { passive: true });
+
+    // Smooth anchor scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const t = document.querySelector(a.getAttribute('href'));
+        if (t) {
+          const y = t.getBoundingClientRect().top + window.scrollY - 80;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Form
+    const form = document.getElementById('leadForm');
+    const formContent = document.getElementById('formContent');
+    const formSuccess = document.getElementById('formSuccess');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const f = { n: document.getElementById('fullName'), p: document.getElementById('phone'), e: document.getElementById('email') };
+      let ok = true;
+
+      Object.values(f).forEach(el => { el.classList.remove('err'); });
+
+      if (!f.n.value.trim()) { f.n.classList.add('err'); ok = false; }
+      if (f.p.value.replace(/\D/g,'').length < 10) { f.p.classList.add('err'); ok = false; }
+      if (!f.e.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.e.value)) { f.e.classList.add('err'); ok = false; }
+
+      if (!ok) {
+        const first = document.querySelector('.field input.err');
+        if (first) first.focus();
+        return;
+      }
+
+      formContent.style.opacity = '0';
+      formContent.style.transition = 'opacity 0.3s';
+      setTimeout(() => {
+        formContent.style.display = 'none';
+        formSuccess.classList.add('show');
+        formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 300);
+    });
+
+    // Clear errors on input
+    document.querySelectorAll('.field input, .field textarea').forEach(el => {
+      el.addEventListener('input', () => el.classList.remove('err'));
+    });
+
+    // Phone formatting
+    document.getElementById('phone').addEventListener('input', function(e) {
+      let v = e.target.value.replace(/\D/g, '');
+      if (v.length > 10) v = v.slice(0, 10);
+      if (v.length >= 7) v = '(' + v.slice(0,3) + ') ' + v.slice(3,6) + '-' + v.slice(6);
+      else if (v.length >= 4) v = '(' + v.slice(0,3) + ') ' + v.slice(3);
+      else if (v.length >= 1) v = '(' + v;
+      e.target.value = v;
+    });
+  </script>
+
+</body>
+</html>
