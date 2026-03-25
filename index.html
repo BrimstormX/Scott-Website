@@ -4,7 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sell Your Land Fast for Cash | The Scott Group Property Advisors</title>
-  <meta name="description" content="Get a fair cash offer for your vacant land in as little as 24 hours. No commissions, no closing costs, no hassle. The Scott Group Property Advisors buys land nationwide.">
+  <meta name="description" content="Get a fair cash offer for your vacant land in as little as 24 hours. No commissions, no closing costs, no hassle. The Scott Group Property Advisors connects land owners with qualified cash buyers nationwide.">
+  <meta name="keywords" content="sell land fast, cash offer for land, sell vacant land, land buyers, sell my land, land sourcing, sell land no commission, sell land no fees, sell property fast, The Scott Group Property Advisors">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Sell Your Land Fast for Cash | The Scott Group Property Advisors">
+  <meta property="og:description" content="Get a fair cash offer for your vacant land in as little as 24 hours. No commissions, no closing costs, no hassle.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sell Your Land Fast for Cash | The Scott Group Property Advisors">
+  <meta name="twitter:description" content="Get a fair cash offer for your vacant land in as little as 24 hours. No commissions, no closing costs, no hassle.">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+  <link rel="canonical" href="https://thescottgrouppa.com/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Karla:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -97,8 +109,8 @@
       -webkit-backdrop-filter: blur(12px);
     }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; }
-    .nav-logo img { height: 52px; width: auto; transition: height 0.4s var(--ease); }
-    .nav.pinned .nav-logo img { height: 44px; }
+    .nav-logo img { height: 68px; width: auto; transition: height 0.4s var(--ease); }
+    .nav.pinned .nav-logo img { height: 52px; }
     .nav-links { display: flex; align-items: center; gap: 32px; }
     .nav-link {
       font-size: 14px; font-weight: 500; color: var(--stone-600);
@@ -202,7 +214,7 @@
       opacity: 0; animation: fadeIn 0.8s 0.5s var(--ease) forwards;
     }
     .hero-logo-img {
-      width: 320px; height: auto;
+      width: 380px; height: auto;
       filter: drop-shadow(0 4px 24px rgba(178,34,52,0.08));
     }
     .hero-logo-caption {
@@ -503,8 +515,19 @@
       margin-top: 20px; padding: 14px 16px;
       background: var(--stone-50); border-radius: 6px;
       border: 1px solid var(--stone-100);
+      transition: border-color 0.25s, box-shadow 0.25s;
     }
-    .tcpa-box p { font-size: 11px; color: var(--stone-400); line-height: 1.7; }
+    .consent-label {
+      display: flex; align-items: flex-start; gap: 10px; cursor: pointer;
+    }
+    .consent-label input[type="checkbox"] {
+      margin-top: 3px; width: 16px; height: 16px; accent-color: var(--orange); flex-shrink: 0; cursor: pointer;
+    }
+    .consent-label span {
+      font-size: 11px; color: var(--stone-500); line-height: 1.6;
+    }
+    .consent-label a { color: var(--stone-800); text-decoration: underline; }
+    .consent-label a:hover { color: var(--orange); }
 
     /* Success state */
     .form-ok { display: none; text-align: center; padding: 44px 20px; }
@@ -543,8 +566,27 @@
       font-family: var(--serif); font-size: 16px; font-weight: 600;
       color: rgba(255,255,255,0.7);
     }
+    .footer-links { display: flex; gap: 16px; font-size: 13px; margin-top: 8px; }
+    .footer-links a { color: rgba(255,255,255,0.6); text-decoration: underline; transition: color 0.25s; }
+    .footer-links a:hover { color: #fff; }
     .footer-copy { font-size: 13px; }
     .footer-tcpa { font-size: 11px; line-height: 1.75; color: rgba(255,255,255,0.25); max-width: 800px; }
+
+    /* ===================== MISSION BAR ===================== */
+    .mission-bar {
+      background: var(--white);
+      padding: 44px 0;
+      border-bottom: 1px solid var(--stone-100);
+      text-align: center;
+    }
+    .mission-text {
+      font-family: var(--serif);
+      font-size: 19px;
+      line-height: 1.7;
+      color: var(--stone-700);
+      max-width: 700px;
+      margin: 0 auto;
+    }
 
     /* ===================== ANIMATIONS ===================== */
     @keyframes fadeUp {
@@ -631,13 +673,13 @@
     <div class="container">
       <div class="hero-grid">
         <div>
-          <div class="hero-tagline">Trusted Land Buyers &bull; Nationwide</div>
+          <div class="hero-tagline">Land Sourcing Advisors &bull; Nationwide</div>
           <h1 class="hero-h1">
-            We Buy Vacant Land<br>
-            for <span>Cash</span> &mdash; Fast
+            We Connect Your Land<br>
+            to <span>Cash Buyers</span>
           </h1>
           <p class="hero-p">
-            Tell us about your property and receive a fair, no-obligation cash offer &mdash; typically within 24&nbsp;hours. No realtors, no commissions, no waiting months to close.
+            We source vacant land for investors and builders ready to buy. Tell us about your property and we'll connect it with qualified buyers &mdash; no realtors, no commissions, no waiting months to close.
           </p>
           <div class="hero-cta-row">
             <a href="#contact" class="btn-main">
@@ -649,33 +691,24 @@
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
             </a>
           </div>
-          <div class="hero-stats">
-            <div class="hero-stat">
-              <strong>42</strong>
-              <small>States Served</small>
-            </div>
-            <div class="hero-stat-sep"></div>
-            <div class="hero-stat">
-              <strong>24hr</strong>
-              <small>Offer Turnaround</small>
-            </div>
-            <div class="hero-stat-sep"></div>
-            <div class="hero-stat">
-              <strong>$0</strong>
-              <small>Fees or Commissions</small>
-            </div>
-          </div>
         </div>
         <div class="hero-showcase">
           <img src="logo.png" alt="The Scott Group Property Advisors" class="hero-logo-img">
           <div class="brand-rule">
             <span class="brand-rule-dot"></span>
           </div>
-          <span class="hero-logo-caption">Property Advisors You Can Trust</span>
+          <span class="hero-logo-caption">Sourcing Land for Investors &amp; Builders</span>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- ======== MISSION STATEMENT ======== -->
+  <div class="mission-bar sr">
+    <div class="container">
+      <p class="mission-text"><strong><em>Our mission is to provide land owners with fast, straightforward and reliable solutions for selling their property without pressure or complications. We cut through the complexity so sellers can move on and investors can move forward.</em></strong></p>
+    </div>
+  </div>
 
   <!-- ======== TRUST BAR ======== -->
   <div class="trust-bar">
@@ -683,7 +716,7 @@
       <div class="trust-bar-inner">
         <div class="trust-item">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/></svg>
-          Fully Licensed
+          LLC Protected
         </div>
         <div class="trust-sep"></div>
         <div class="trust-item">
@@ -703,7 +736,7 @@
         <div class="trust-sep"></div>
         <div class="trust-item">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          We Buy As-Is
+          Most Conditions Accepted
         </div>
       </div>
     </div>
@@ -716,24 +749,24 @@
         <div class="section-eyebrow">How It Works</div>
         <div class="brand-rule"><span class="brand-rule-dot"></span></div>
         <h2 class="section-h2">Three Steps to Selling Your Land</h2>
-        <p class="section-sub">We took the complexity out of selling land. No listings, no showings, no months of waiting around.</p>
+        <p class="section-sub">We connect land owners with qualified buyers. No listings, no showings and no months of negotiations.</p>
       </div>
 
       <div class="steps">
         <div class="step-card sr sr-d1">
           <div class="step-num">1</div>
           <h3>Tell Us About Your Land</h3>
-          <p>Complete the short form below with your property details. Takes under two minutes and there's zero obligation.</p>
+          <p>Complete the short form below with your property details. It takes under two minutes and there's zero obligation.</p>
         </div>
         <div class="step-card sr sr-d2">
           <div class="step-num">2</div>
-          <h3>Get a Cash Offer</h3>
-          <p>We research your property and present a fair, transparent cash offer &mdash; typically within 24 hours. No games.</p>
+          <h3>We Find a Buyer</h3>
+          <p>We match your property with qualified investors and builders in our network and present a fair &amp; transparent cash offer &mdash; typically within 24 hours.</p>
         </div>
         <div class="step-card sr sr-d3">
           <div class="step-num">3</div>
           <h3>Pick Your Closing Date</h3>
-          <p>Accept the offer, choose a closing timeline that works for you, and get paid. We handle paperwork and closing costs.</p>
+          <p>Accept the offer, choose a closing timeline that works for you and get paid. We handle all the paperwork.</p>
         </div>
       </div>
     </div>
@@ -744,10 +777,10 @@
     <div class="container">
       <div class="benefits-grid">
         <div class="benefits-col sr">
-          <div class="section-eyebrow">Why Sell to Us</div>
+          <div class="section-eyebrow">Why Work With Us</div>
           <div class="brand-rule" style="justify-content:flex-start;"><span class="brand-rule-dot"></span></div>
-          <h2 class="section-h2">The Simpler Way to Sell Your Land</h2>
-          <p class="section-sub">Traditional listings mean months of waiting, agent commissions, and uncertainty. We offer something better.</p>
+          <h2 class="section-h2">The Hassle-Free Way to Sell Your Land</h2>
+          <p class="section-sub">Traditional listings mean months of waiting, agent commissions &amp; uncertainty. We connect you directly with qualified buyers.</p>
 
           <div class="benefit-list">
             <div class="benefit-row">
@@ -756,7 +789,7 @@
               </div>
               <div>
                 <h4>Zero Commissions or Fees</h4>
-                <p>No agent fees, no hidden costs. The offer we make is what you keep.</p>
+                <p>No agent fees, no hidden costs. The offer you accept is what you keep.</p>
               </div>
             </div>
             <div class="benefit-row">
@@ -764,8 +797,8 @@
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/></svg>
               </div>
               <div>
-                <h4>We Pay All Closing Costs</h4>
-                <p>Title, escrow, transfer fees &mdash; all on us. Your offer is your payout.</p>
+                <h4>All Closing Costs Covered</h4>
+                <p>Title, escrow, transfer fees &mdash; all covered.</p>
               </div>
             </div>
             <div class="benefit-row">
@@ -773,8 +806,8 @@
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
               </div>
               <div>
-                <h4>Fast Cash, Your Timeline</h4>
-                <p>Close in as few as 14 days or on whatever schedule suits you best.</p>
+                <h4>Fast Cash on Your Timeline</h4>
+                <p>Close in as few as 14 days and on your schedule.</p>
               </div>
             </div>
             <div class="benefit-row">
@@ -782,8 +815,8 @@
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
               </div>
               <div>
-                <h4>We Buy Land As-Is</h4>
-                <p>Overgrown, landlocked, back taxes, unclear boundaries &mdash; doesn't matter.</p>
+                <h4>Any Condition or Any Situation</h4>
+                <p>Overgrown, landlocked, back taxes, unclear boundaries &mdash; our buyers take it all.</p>
               </div>
             </div>
           </div>
@@ -794,7 +827,7 @@
             <div class="stats-panel-label">By the Numbers</div>
             <div class="stats-panel-grid">
               <div class="stat-block">
-                <strong>24hr</strong>
+                <strong>24hrs</strong>
                 <span>Average time to<br>receive your offer</span>
               </div>
               <div class="stat-block">
@@ -808,7 +841,7 @@
               </div>
               <div class="stat-block">
                 <strong>42</strong>
-                <span>States where<br>we operate</span>
+                <span>States in which<br>we operate</span>
               </div>
             </div>
           </div>
@@ -820,7 +853,7 @@
   <!-- ======== COVERAGE ======== -->
   <div class="coverage sr">
     <div class="container">
-      <p><strong>We buy land nationwide.</strong> The Scott Group Property Advisors operates across 42 states, delivering fair cash offers to landowners coast&nbsp;to&nbsp;coast.</p>
+      <p><strong>We source land nationwide.</strong> The Scott Group Property Advisors operates across 42 states, connecting land owners with investors and builders coast&nbsp;to&nbsp;coast.</p>
       <p class="excluded">We do not currently operate in Illinois, Massachusetts, Nebraska, New York, North Carolina, Oklahoma, Pennsylvania &amp; South Carolina.</p>
     </div>
   </div>
@@ -833,7 +866,7 @@
           <div class="section-eyebrow">Contact Us</div>
           <div class="brand-rule" style="justify-content:flex-start;"><span class="brand-rule-dot"></span></div>
           <h2 class="section-h2">Ready to Sell Your Land?</h2>
-          <p class="contact-text">Fill out the form and our team will reach out with a fair, no-obligation cash offer. Most landowners hear back within 24&nbsp;hours.</p>
+          <p class="contact-text">Fill out the form and our team will connect your property with qualified investors and builders in our network. Most land owners hear back within 24&nbsp;hours.</p>
 
           <ul class="promise-list">
             <li class="promise-item">
@@ -850,14 +883,10 @@
             </li>
             <li class="promise-item">
               <span class="promise-check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg></span>
-              We cover all closing costs
+              $0 closing costs and fees
             </li>
           </ul>
 
-          <div class="testi">
-            <p>&ldquo;The process was exactly as described &mdash; simple, fast, and straightforward. I had my cash within three weeks of first reaching out.&rdquo;</p>
-            <cite>&mdash; Recent Landowner</cite>
-          </div>
         </div>
 
         <div class="sr sr-d2">
@@ -900,7 +929,10 @@
               </form>
 
               <div class="tcpa-box">
-                <p>By providing your phone number, you agree to receive text messages or calls from The Scott Group Property Advisors regarding your property inquiry. Message and data rates may apply. You can opt-out at any time by replying STOP. Message frequency varies. View our Privacy Policy for more information.</p>
+                <label class="consent-label" for="consentCheck">
+                  <input type="checkbox" id="consentCheck" name="consentCheck" required>
+                  <span>By checking this box, you agree to receive text messages and calls from The Scott Group Property Advisors regarding your property inquiry at the phone number provided. Consent is not a condition to purchase. Message and data rates may apply. Message frequency varies. Reply HELP for help or STOP to cancel. See our <a href="privacy-policy.html" target="_blank">Privacy Policy</a> and <a href="terms-of-service.html" target="_blank">Terms of Service</a>.</span>
+                </label>
               </div>
             </div>
 
@@ -924,11 +956,37 @@
         <div class="footer-brand">
           <span>The Scott Group Property Advisors</span>
         </div>
+        <div class="footer-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+        </div>
         <div class="footer-copy">&copy; 2026 The Scott Group Property Advisors. All rights reserved.</div>
       </div>
       <p class="footer-tcpa">By providing your phone number, you agree to receive text messages or calls from The Scott Group Property Advisors regarding your property inquiry. Message and data rates may apply. You can opt-out at any time by replying STOP. Message frequency varies. This site is not intended to solicit properties currently listed with a real estate broker.</p>
     </div>
   </footer>
+
+  <!-- ======== STRUCTURED DATA ======== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "The Scott Group Property Advisors",
+    "description": "We connect land owners with qualified cash buyers. Get a fair cash offer for your vacant land in as little as 24 hours with no commissions, no closing costs, and no hassle.",
+    "image": "logo.png",
+    "areaServed": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "serviceType": ["Land Buying", "Land Sourcing", "Property Advisory"],
+    "offers": {
+      "@type": "Offer",
+      "description": "Free cash offer for vacant land with no commissions or closing costs",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
 
   <!-- ======== JS ======== -->
   <script>
@@ -974,8 +1032,16 @@
       if (f.p.value.replace(/\D/g,'').length < 10) { f.p.classList.add('err'); ok = false; }
       if (!f.e.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.e.value)) { f.e.classList.add('err'); ok = false; }
 
+      const consent = document.getElementById('consentCheck');
+      const tcpaBox = consent.closest('.tcpa-box');
+      if (!consent.checked) {
+        tcpaBox.style.borderColor = 'var(--red)';
+        tcpaBox.style.boxShadow = '0 0 0 3px rgba(178,34,52,0.07)';
+        ok = false;
+      }
+
       if (!ok) {
-        const first = document.querySelector('.field input.err');
+        const first = document.querySelector('.field input.err') || (!consent.checked ? consent : null);
         if (first) first.focus();
         return;
       }
@@ -992,6 +1058,14 @@
     // Clear errors on input
     document.querySelectorAll('.field input, .field textarea').forEach(el => {
       el.addEventListener('input', () => el.classList.remove('err'));
+    });
+    
+    document.getElementById('consentCheck').addEventListener('change', function() {
+      if (this.checked) {
+        const box = this.closest('.tcpa-box');
+        box.style.borderColor = 'var(--stone-100)';
+        box.style.boxShadow = 'none';
+      }
     });
 
     // Phone formatting
