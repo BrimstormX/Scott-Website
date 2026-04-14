@@ -414,14 +414,15 @@
       pointer-events: none;
     }
     .contact-grid {
-      display: grid; grid-template-columns: 1fr 1.15fr;
-      gap: 72px; align-items: start;
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
       position: relative; z-index: 1;
     }
-    .contact-left .section-eyebrow { text-align: left; }
-    .contact-left .section-h2 { text-align: left; margin-bottom: 14px; }
-    .contact-text { font-size: 16px; color: var(--stone-500); line-height: 1.75; margin-bottom: 36px; }
-    .promise-list { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-bottom: 44px; }
+    .contact-left .section-eyebrow { text-align: center; }
+    .contact-left .section-h2 { text-align: center; margin-bottom: 14px; }
+    .contact-text { font-size: 16px; color: var(--stone-500); line-height: 1.75; margin-bottom: 36px; text-align: center; }
+    .promise-list { list-style: none; display: flex; flex-direction: column; align-items: center; gap: 14px; margin-bottom: 44px; }
     .promise-item {
       display: flex; align-items: center; gap: 12px;
       font-size: 14px; font-weight: 500; color: var(--stone-700);
@@ -434,116 +435,7 @@
     }
     .promise-check svg { width: 14px; height: 14px; color: var(--orange); }
 
-    /* Testimonial */
-    .testi {
-      padding: 24px 28px;
-      background: var(--white); border-radius: 8px;
-      border-left: 3px solid var(--orange);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-    }
-    .testi p {
-      font-family: var(--serif); font-size: 17px; font-style: italic;
-      color: var(--stone-700); line-height: 1.65; margin-bottom: 10px;
-    }
-    .testi cite {
-      font-style: normal; font-family: var(--sans);
-      font-size: 13px; color: var(--stone-400); font-weight: 500;
-    }
-
-    /* Form */
-    .form-wrap {
-      background: var(--white);
-      border: 1px solid var(--stone-100);
-      border-radius: 10px;
-      padding: 44px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.04);
-      position: relative;
-    }
-    .form-wrap::before {
-      content: ''; position: absolute;
-      top: 0; left: 36px; right: 36px; height: 3px;
-      background: var(--brand-gradient); border-radius: 0 0 3px 3px;
-    }
-    .form-heading {
-      font-family: var(--serif); font-size: 26px; font-weight: 700;
-      color: var(--stone-900); margin-bottom: 4px;
-    }
-    .form-subheading { font-size: 14px; color: var(--stone-400); margin-bottom: 28px; }
-    .field { margin-bottom: 18px; }
-    .field label {
-      display: block; font-size: 13px; font-weight: 600;
-      color: var(--stone-700); margin-bottom: 6px;
-    }
-    .field label .req { color: var(--red); }
-    .field label .opt { color: var(--stone-300); font-weight: 400; font-size: 12px; }
-    .field input, .field textarea {
-      width: 100%; padding: 14px 16px;
-      border: 1.5px solid var(--stone-100);
-      border-radius: 6px;
-      font-family: var(--sans); font-size: 15px;
-      color: var(--stone-800);
-      background: var(--white);
-      transition: border-color 0.25s, box-shadow 0.25s;
-      outline: none;
-    }
-    .field input::placeholder, .field textarea::placeholder { color: var(--stone-300); }
-    .field input:focus, .field textarea:focus {
-      border-color: var(--orange);
-      box-shadow: 0 0 0 3px rgba(217,78,31,0.07);
-    }
-    .field input.err, .field textarea.err, .tcpa-box.err {
-      border-color: var(--red);
-      box-shadow: 0 0 0 3px rgba(178,34,52,0.07);
-    }
-    .field textarea { resize: vertical; min-height: 100px; }
-    .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-
-    .btn-submit {
-      width: 100%; padding: 16px 28px;
-      background: var(--brand-gradient); color: #fff;
-      font-family: var(--sans); font-weight: 700; font-size: 16px;
-      border: none; border-radius: 6px; cursor: pointer;
-      display: flex; align-items: center; justify-content: center; gap: 10px;
-      transition: box-shadow 0.3s, transform 0.25s;
-      letter-spacing: 0.3px; margin-top: 4px;
-    }
-    .btn-submit:hover { box-shadow: 0 8px 28px rgba(217,78,31,0.3); transform: translateY(-2px); }
-    .btn-submit svg { width: 16px; height: 16px; transition: transform 0.25s; }
-    .btn-submit:hover svg { transform: translateX(3px); }
-
-    .tcpa-box {
-      margin-top: 20px; padding: 14px 16px;
-      background: var(--stone-50); border-radius: 6px;
-      border: 1px solid var(--stone-100);
-      transition: border-color 0.25s, box-shadow 0.25s;
-    }
-    .consent-label {
-      display: flex; align-items: flex-start; gap: 10px; cursor: pointer;
-    }
-    .consent-label input[type="checkbox"] {
-      margin-top: 3px; width: 16px; height: 16px; accent-color: var(--orange); flex-shrink: 0; cursor: pointer;
-    }
-    .consent-label span {
-      font-size: 11px; color: var(--stone-500); line-height: 1.6;
-    }
-    .consent-label a { color: var(--stone-800); text-decoration: underline; }
-    .consent-label a:hover { color: var(--orange); }
-
-    /* Success state */
-    .form-ok { display: none; text-align: center; padding: 44px 20px; }
-    .form-ok.show { display: block; animation: fadeUp 0.5s var(--ease); }
-    .form-ok-icon {
-      width: 68px; height: 68px; border-radius: 50%;
-      background: rgba(217,78,31,0.08);
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 20px;
-    }
-    .form-ok-icon svg { width: 30px; height: 30px; color: var(--orange); }
-    .form-ok h3 {
-      font-family: var(--serif); font-size: 24px; font-weight: 700;
-      color: var(--stone-900); margin-bottom: 8px;
-    }
-    .form-ok p { font-size: 15px; color: var(--stone-500); line-height: 1.7; max-width: 360px; margin: 0 auto; }
+    /* Form removed */
 
     /* ===================== FOOTER ===================== */
     .footer {
@@ -604,7 +496,6 @@
       .hero-showcase { align-items: flex-start; }
       .hero-logo-img { width: 240px; }
       .benefits-grid { grid-template-columns: 1fr; gap: 48px; }
-      .contact-grid { grid-template-columns: 1fr; gap: 48px; }
     }
     @media (max-width: 768px) {
       .section { padding: 72px 0; }
@@ -616,9 +507,6 @@
       .hero-stat-sep { display: none; }
       .steps { grid-template-columns: 1fr; gap: 20px; }
       .steps::after { display: none; }
-      .field-row { grid-template-columns: 1fr; }
-      .form-wrap { padding: 32px 22px; }
-      .form-wrap::before { left: 22px; right: 22px; }
       .footer-top { flex-direction: column; text-align: center; }
       .testi { display: none; }
     }
@@ -864,9 +752,9 @@
       <div class="contact-grid">
         <div class="contact-left sr">
           <div class="section-eyebrow">Contact Us</div>
-          <div class="brand-rule" style="justify-content:flex-start;"><span class="brand-rule-dot"></span></div>
+          <div class="brand-rule" style="justify-content:center;"><span class="brand-rule-dot"></span></div>
           <h2 class="section-h2">Ready to Sell Your Land?</h2>
-          <p class="contact-text">Fill out the form and our team will review your property and prepare a cash offer. Most land owners hear back within 24&nbsp;hours.</p>
+          <p class="contact-text">Click the chat icon in the bottom-right corner to tell us about your property. Our team will review your details and prepare a cash offer — most land owners hear back within 24&nbsp;hours.</p>
 
           <ul class="promise-list">
             <li class="promise-item">
@@ -887,63 +775,16 @@
             </li>
           </ul>
 
-        </div>
-
-        <div class="sr sr-d2">
-          <div class="form-wrap">
-            <div id="formContent">
-              <h3 class="form-heading">Get Your Cash Offer</h3>
-              <p class="form-subheading">Share your details and we'll be in touch.</p>
-
-              <form id="leadForm" novalidate>
-                <div class="field">
-                  <label for="fullName">Full Name <span class="req">*</span></label>
-                  <input type="text" id="fullName" name="fullName" placeholder="John Smith" required autocomplete="name">
-                </div>
-
-                <div class="field-row">
-                  <div class="field">
-                    <label for="phone">Phone Number <span class="req">*</span></label>
-                    <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required autocomplete="tel">
-                  </div>
-                  <div class="field">
-                    <label for="email">Email Address <span class="req">*</span></label>
-                    <input type="email" id="email" name="email" placeholder="john@email.com" required autocomplete="email">
-                  </div>
-                </div>
-
-                <div class="field">
-                  <label for="address">Property / Land Address <span class="opt">(Optional)</span></label>
-                  <input type="text" id="address" name="address" placeholder="123 Main St, City, State ZIP" autocomplete="street-address">
-                </div>
-
-                <div class="field">
-                  <label for="message">Message</label>
-                  <textarea id="message" name="message" placeholder="Tell us about your land — acreage, location details, or anything you'd like us to know..."></textarea>
-                </div>
-
-                <div class="tcpa-box">
-                  <label class="consent-label" for="consentCheck">
-                    <input type="checkbox" id="consentCheck" name="consentCheck" required>
-                    <span>By checking this box, you agree to receive text messages and calls from TSGPA / The Scott Group Property Advisors, including property inquiry follow-ups, cash offers, and promotional messages. Consent is not a condition to purchase. Message and data rates may apply. Message frequency varies. Reply HELP for help or STOP to cancel. See our <a href="privacy-policy.html" target="_blank">Privacy Policy</a> and <a href="terms-of-service.html" target="_blank">Terms of Service</a>.</span>
-                  </label>
-                </div>
-
-                <button type="submit" class="btn-submit">
-                  Get My Cash Offer
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
-                </button>
-              </form>
+          <div style="margin-top: 32px; padding: 24px 28px; background: var(--white); border-radius: 8px; border: 1px solid var(--stone-100); box-shadow: 0 2px 8px rgba(0,0,0,0.03); display: inline-flex; align-items: center; gap: 14px;">
+            <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--brand-gradient); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#fff" style="width: 22px; height: 22px;"><path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z"/></svg>
             </div>
-
-            <div class="form-ok" id="formSuccess">
-              <div class="form-ok-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
-              </div>
-              <h3>We've Got Your Details!</h3>
-              <p>A member of our team will reach out within 24 hours with your cash offer. Thank you for choosing TSGPA / The Scott Group Property Advisors.</p>
+            <div style="text-align: left;">
+              <div style="font-family: var(--serif); font-size: 16px; font-weight: 600; color: var(--stone-900);">Start a conversation</div>
+              <div style="font-size: 13px; color: var(--stone-400);">Use the chat widget in the bottom-right corner</div>
             </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -963,7 +804,7 @@
         </div>
         <div class="footer-copy">&copy; 2026 TSGPA d/b/a The Scott Group Property Advisors. All rights reserved.</div>
       </div>
-      <p class="footer-tcpa">By providing your phone number, you agree to receive text messages or calls from TSGPA / The Scott Group Property Advisors, including property-related updates and promotional messages. Message and data rates may apply. You can opt out at any time by replying STOP. Message frequency varies. This site is not intended to solicit properties currently listed with a real estate broker.</p>
+      <p class="footer-tcpa">By using our chat widget and providing your phone number, you consent to receive text messages from TSGPA / The Scott Group Property Advisors, including property-related updates and promotional messages. Message and data rates may apply. You can opt out at any time by replying STOP. Message frequency varies. This site is not intended to solicit properties currently listed with a real estate broker.</p>
     </div>
   </footer>
 
@@ -1017,62 +858,9 @@
       });
     });
 
-    // Form
-    const form = document.getElementById('leadForm');
-    const formContent = document.getElementById('formContent');
-    const formSuccess = document.getElementById('formSuccess');
-
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      const f = { n: document.getElementById('fullName'), p: document.getElementById('phone'), e: document.getElementById('email') };
-      const cCheck = document.getElementById('consentCheck');
-      const cBox = document.querySelector('.tcpa-box');
-      let ok = true;
-
-      Object.values(f).forEach(el => { el.classList.remove('err'); });
-      cBox.classList.remove('err');
-
-      if (!f.n.value.trim()) { f.n.classList.add('err'); ok = false; }
-      if (f.p.value.replace(/\D/g,'').length < 10) { f.p.classList.add('err'); ok = false; }
-      if (!f.e.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.e.value)) { f.e.classList.add('err'); ok = false; }
-      if (!cCheck.checked) { cBox.classList.add('err'); ok = false; }
-
-      if (!ok) {
-        const first = document.querySelector('.field input.err, .tcpa-box.err');
-        if (first) first.focus();
-        return;
-      }
-
-      formContent.style.opacity = '0';
-      formContent.style.transition = 'opacity 0.3s';
-      setTimeout(() => {
-        formContent.style.display = 'none';
-        formSuccess.classList.add('show');
-        formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 300);
-    });
-
-    // Clear errors on input
-    document.querySelectorAll('.field input, .field textarea').forEach(el => {
-      el.addEventListener('input', () => el.classList.remove('err'));
-    });
-    
-    document.getElementById('consentCheck').addEventListener('change', function() {
-      if (this.checked) {
-        this.closest('.tcpa-box').classList.remove('err');
-      }
-    });
-
-    // Phone formatting
-    document.getElementById('phone').addEventListener('input', function(e) {
-      let v = e.target.value.replace(/\D/g, '');
-      if (v.length > 10) v = v.slice(0, 10);
-      if (v.length >= 7) v = '(' + v.slice(0,3) + ') ' + v.slice(3,6) + '-' + v.slice(6);
-      else if (v.length >= 4) v = '(' + v.slice(0,3) + ') ' + v.slice(3);
-      else if (v.length >= 1) v = '(' + v;
-      e.target.value = v;
-    });
+    // Form removed
   </script>
 
+  <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="69dec326e703e3edee0217ba"></script>
 </body>
 </html>
